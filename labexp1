@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Student Activity Portal: view events and register.">
+  <meta name="author" content="Student Name">
+  <title>Student Activity Portal</title>
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.5; margin: 0; color: #222; }
+    header, footer { background: #14213d; color: #fff; padding: 1rem; }
+    nav a { color: #fff; margin-right: 1rem; }
+    main { max-width: 800px; margin: auto; padding: 1rem; }
+    article, aside { border: 1px solid #999; padding: .5rem 1rem; margin-bottom: 1rem; }
+    label { display: block; margin-top: .75rem; font-weight: bold; }
+    input[type=text], input[type=email], select, textarea { width: 100%; padding: .5rem; border: 2px solid #555; }
+    fieldset { margin-top: 1rem; }
+    fieldset label { display: inline; font-weight: normal; }
+    button { margin-top: 1rem; padding: .6rem 1.2rem; background: #0f766e; color: #fff; border: 0; }
+    :focus-visible { outline: 3px solid #ffb703; outline-offset: 2px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Student Activity Portal</h1>
+    <nav aria-label="Main">
+      <a href="#events">Events</a>
+      <a href="#register">Register</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="events">
+      <h2>Upcoming Events</h2>
+      <article>
+        <h3>Hack the Campus</h3>
+        <p><time datetime="2026-12-05">5 Dec 2026</time>, Innovation Lab</p>
+      </article>
+      <article>
+        <h3>Cultural Fest</h3>
+        <p><time datetime="2026-12-12">12 Dec 2026</time>, Main Auditorium</p>
+      </article>
+    </section>
+
+    <section id="register">
+      <h2>Student Registration</h2>
+      <form action="#" method="post">
+        <label for="name">Full name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="dept">Department</label>
+        <select id="dept" name="dept">
+          <option value="">Select</option>
+          <option>Computer Science</option>
+          <option>Electronics</option>
+          <option>Mechanical</option>
+        </select>
+
+        <fieldset>
+          <legend>Participation type</legend>
+          <input type="radio" id="ind" name="type" value="individual">
+          <label for="ind">Individual</label>
+          <input type="radio" id="team" name="type" value="team">
+          <label for="team">Team</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Events</legend>
+          <input type="checkbox" id="e1" name="events" value="hack">
+          <label for="e1">Hack the Campus</label>
+          <input type="checkbox" id="e2" name="events" value="fest">
+          <label for="e2">Cultural Fest</label>
+        </fieldset>
+
+        <label for="msg">Comments</label>
+        <textarea id="msg" name="msg" rows="3"></textarea>
+
+        <button type="submit">Register</button>
+      </form>
+    </section>
+
+    <aside>
+      <h2>Notice</h2>
+      <p>Registration closes on 1 December.</p>
+    </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Student Activity Portal</p>
+  </footer>
+</body>
+</html>
